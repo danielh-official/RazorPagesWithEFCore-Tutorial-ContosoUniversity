@@ -30,7 +30,7 @@ using (var scope = app.Services.CreateScope())
 
     var context = services.GetRequiredService<SchoolContext>();
     context.Database.EnsureCreated();
-    // DbInitializer.Initialize(context);
+    DbInitializer.Initialize(context);
 }
 
 app.UseHttpsRedirection();
