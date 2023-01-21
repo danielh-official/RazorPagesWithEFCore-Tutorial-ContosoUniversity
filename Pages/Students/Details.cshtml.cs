@@ -19,11 +19,11 @@ namespace ContosoUniversity.Pages.Students
             _context = context;
         }
 
-      public Student Student { get; set; } = default!; 
+        public Student Student { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
-            if (id == null || _context.Students == null)
+            if (id == null)
             {
                 return NotFound();
             }
